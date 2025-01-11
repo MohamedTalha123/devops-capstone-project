@@ -62,8 +62,8 @@ def create_accounts():
 ######################################################################
 
 # ... place you code here to LIST accounts ...
-app.route("/accounts", methods=["GET"])
-def get_all_accounts():
+@app.route("/accounts", methods=["GET"])
+def list_accounts():
     """
     List all accounts
     this endpoint will list all the availbale accounts
@@ -130,7 +130,7 @@ def delete_account(id):
     Delete an Account
     This endpoint will delete an Account based on the account_id that is requested
     """
-    app.logger.info("Request to delete an Account with id: %s", account_id)
+    app.logger.info("Request to delete an Account with id: %s", id)
     account= Account.find(id)
 
     if account:
