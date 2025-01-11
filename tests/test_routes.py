@@ -21,7 +21,7 @@ BASE_URL = "/accounts"
 
 
 ######################################################################
-#  T E S T   C A S E S
+#  TEST   CASES
 ######################################################################
 class TestAccountService(TestCase):
     """Account Service Tests"""
