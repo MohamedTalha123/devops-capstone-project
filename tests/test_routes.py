@@ -21,7 +21,7 @@ BASE_URL = "/accounts"
 
 
 ######################################################################
-#  T E S T   C A S E S
+#  TEST   CASES
 ######################################################################
 class TestAccountService(TestCase):
     """Account Service Tests"""
@@ -169,7 +169,7 @@ class TestAccountService(TestCase):
         self.assertEqual(resp.status_code, status.HTTP_204_NO_CONTENT)
 
     def test_method_not_allowed(self):
-        """It should not allow an illegal method call"""
+        """IT Should not allow an illegal method call"""
         resp = self.client.delete(BASE_URL)
         self.assertEqual(resp.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
 
